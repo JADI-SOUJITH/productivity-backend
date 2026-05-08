@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Productivity Tracker",
+  "version": "1.0",
+  "permissions": ["tabs", "storage", "downloads"],
+  "host_permissions": [
+    "http://127.0.0.1:5001/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Productivity Tracker"
+  }
+}

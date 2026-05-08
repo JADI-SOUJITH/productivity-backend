@@ -1,0 +1,58 @@
+{
+  "productive": [
+    "leetcode.com",
+    "geeksforgeeks.org",
+    "github.com",
+    "stackoverflow.com",
+    "takeuforward.org",
+    "codeforces.com",
+    "hackerrank.com",
+    "kaggle.com",
+    "coursera.org",
+    "udemy.com",
+    "edx.org",
+    "nptel.ac.in",
+    "w3schools.com",
+    "developer.mozilla.org",
+    "docs.python.org",
+    "chatgpt.com",
+    "notion.so"
+  ],
+
+  "distracting": [
+    "youtube.com",
+    "instagram.com",
+    "facebook.com",
+    "twitter.com",
+    "x.com",
+    "snapchat.com",
+    "reddit.com",
+    "9gag.com",
+    "netflix.com",
+    "primevideo.com",
+    "hotstar.com"
+  ],
+
+  "shopping": [
+    "amazon.in",
+    "amazon.com",
+    "flipkart.com",
+    "myntra.com",
+    "ajio.com"
+  ],
+
+  "gaming": [
+    "poki.com",
+    "crazygames.com",
+    "miniclip.com"
+  ],
+
+  "communication": [
+    "whatsapp.com",
+    "web.whatsapp.com",
+    "mail.google.com",
+    "outlook.live.com",
+    "zoom.us",
+    "meet.google.com"
+  ]
+}
