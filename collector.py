@@ -100,10 +100,12 @@ def should_skip_url(url):
     if not url:
         return True
     skip = [
-        "chrome://", "chrome-extension://", "about:", "edge://",
-        "productivity-tracker.workers.dev",
-        "onrender.com", "railway.app",
-    ]
+    "chrome://", "chrome-extension://", "about:", "edge://",
+    "productivity-tracker.workers.dev",
+    "onrender.com", "railway.app",
+    "mongodb.com",
+    "vercel.app",
+]
     return any(s in url for s in skip)
 
 
