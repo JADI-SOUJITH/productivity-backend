@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from google import genai
+from pymongo import MongoClient
+from pymongo.errors import DuplicateKeyError
 
 import json
 import os
@@ -10,7 +12,7 @@ from urllib.parse import urlparse
 
 app = Flask(__name__)
 
-# ── CORS: allow local dev + your deployed frontend domain ──────────────────
+# ── CORS ──────────────────────────────────────────────────────────────────────
 ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://localhost:3000",
@@ -23,41 +25,29 @@ ALLOWED_ORIGINS = [
 ]
 CORS(app, origins=ALLOWED_ORIGINS, supports_credentials=False)
 
-DATA_FILE = "data.json"
-HISTORY_FILE = "history.json"
-CATEGORIES_FILE = "categories.json"
 IST = timezone(timedelta(hours=5, minutes=30))
 
 GEMINI_KEY = os.getenv("GEMINI_API_KEY")
 client = genai.Client(api_key=GEMINI_KEY) if GEMINI_KEY else None
 
+# ── MongoDB ───────────────────────────────────────────────────────────────────
+MONGO_URI = os.getenv("MONGO_URI")
+mongo     = MongoClient(MONGO_URI)
+db        = mongo["productivity"]
+col_data    = db["tracking_data"]
+col_history = db["history"]
+
+col_data.create_index(
+    [("url", 1), ("start_time", 1), ("end_time", 1)],
+    unique=True, background=True
+)
+
+CATEGORIES_FILE = "categories.json"
+
 
 # =========================
-# FILE HELPERS
+# CATEGORIES
 # =========================
-def load_json_file(path, default):
-    if not os.path.exists(path):
-        return default
-    try:
-        with open(path, "r") as file:
-            return json.load(file)
-    except Exception:
-        return default
-
-
-def save_json_file(path, data):
-    with open(path, "w") as file:
-        json.dump(data, file, indent=2)
-
-
-def load_data():
-    return load_json_file(DATA_FILE, [])
-
-
-def load_history():
-    return load_json_file(HISTORY_FILE, [])
-
-
 def load_categories():
     default_categories = {
         "productive": [
@@ -76,9 +66,7 @@ def load_categories():
         "shopping": [
             "amazon.in", "amazon.com", "flipkart.com", "myntra.com", "ajio.com",
         ],
-        "gaming": [
-            "poki.com", "crazygames.com", "miniclip.com",
-        ],
+        "gaming": ["poki.com", "crazygames.com", "miniclip.com"],
         "communication": [
             "whatsapp.com", "web.whatsapp.com", "mail.google.com",
             "outlook.live.com", "zoom.us", "meet.google.com",
@@ -87,14 +75,15 @@ def load_categories():
     if not os.path.exists(CATEGORIES_FILE):
         return default_categories
     try:
-        data = load_json_file(CATEGORIES_FILE, None)
+        with open(CATEGORIES_FILE, "r") as f:
+            data = json.load(f)
         return data if isinstance(data, dict) else default_categories
     except Exception:
         return default_categories
 
 
 # =========================
-# TIME / URL HELPERS
+# HELPERS
 # =========================
 def parse_ts(value):
     return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(IST)
@@ -107,23 +96,32 @@ def get_domain(url):
         return "unknown"
 
 
+def should_skip_url(url):
+    if not url:
+        return True
+    skip = [
+        "chrome://", "chrome-extension://", "about:", "edge://",
+        "productivity-tracker.workers.dev",
+        "onrender.com", "railway.app",
+    ]
+    return any(s in url for s in skip)
+
+
 def merge_intervals(intervals):
     if not intervals:
         return []
     intervals = sorted(intervals, key=lambda x: x[0])
     merged = [list(intervals[0])]
     for start, end in intervals[1:]:
-        last_start, last_end = merged[-1]
-        if start <= last_end:
-            merged[-1][1] = max(last_end, end)
+        if start <= merged[-1][1]:
+            merged[-1][1] = max(merged[-1][1], end)
         else:
             merged.append([start, end])
     return merged
 
 
 def intervals_to_ms(intervals):
-    merged = merge_intervals(intervals)
-    return sum(int((end - start).total_seconds() * 1000) for start, end in merged)
+    return sum(int((e - s).total_seconds() * 1000) for s, e in merge_intervals(intervals))
 
 
 def classify(domain, categories_map):
@@ -144,48 +142,38 @@ def normalize_previous(entry):
     if not entry:
         return None
     return {
-        "date": entry.get("date"),
-        "total_time": entry.get("total_ms", entry.get("total", 0)),
-        "sessions": entry.get("sessions", 0),
-        "score": entry.get("score", 0),
-        "categories": entry.get("category_ms", entry.get("categories", {})),
-        "spikes": entry.get("spikes", 0),
+        "date":       entry.get("date"),
+        "total_time": entry.get("total_ms", 0),
+        "sessions":   entry.get("sessions", 0),
+        "score":      entry.get("score", 0),
+        "categories": entry.get("category_ms", {}),
+        "spikes":     entry.get("spikes", 0),
     }
 
 
 def get_previous_snapshot(current_date_str):
-    history = load_history()
-    valid = sorted(
-        [h for h in history if h.get("date")],
-        key=lambda h: h["date"]
+    entry = col_history.find_one(
+        {"date": {"$lt": current_date_str}},
+        sort=[("date", -1)]
     )
-    candidates = [h for h in valid if h["date"] < current_date_str]
-    return normalize_previous(candidates[-1]) if candidates else None
+    return normalize_previous(entry)
 
 
 def save_daily_snapshot(snapshot):
-    history = load_history()
-    today_str = snapshot["date"]
-    updated = False
-    for i, item in enumerate(history):
-        if item.get("date") == today_str:
-            history[i] = snapshot
-            updated = True
-            break
-    if not updated:
-        history.append(snapshot)
-    history.sort(key=lambda h: h.get("date", ""))
-    save_json_file(HISTORY_FILE, history)
+    col_history.update_one(
+        {"date": snapshot["date"]},
+        {"$set": snapshot},
+        upsert=True
+    )
 
 
-def compute_averages(history):
-    """Compute per-field averages across all history entries."""
+def compute_averages():
+    history = list(col_history.find({}, {"_id": 0}))
     if not history:
         return {"total_time": 0, "sessions": 0, "score": 0, "spikes": 0}
-
     count = len(history)
     return {
-        "total_time": sum(h.get("total_ms", h.get("total", 0)) for h in history) / count,
+        "total_time": sum(h.get("total_ms", 0) for h in history) / count,
         "sessions":   sum(h.get("sessions", 0) for h in history) / count,
         "score":      sum(h.get("score", 0) for h in history) / count,
         "spikes":     sum(h.get("spikes", 0) for h in history) / count,
@@ -198,24 +186,28 @@ def compute_averages(history):
 @app.route("/save", methods=["POST"])
 def save_data():
     incoming = request.json or []
-    existing = load_data()
+    added = 0
 
-    existing_keys = set(
-        (item.get("url"), item.get("start_time"), item.get("end_time"))
-        for item in existing
-    )
-
-    new_items = []
     for item in incoming:
-        key = (item.get("url"), item.get("start_time"), item.get("end_time"))
-        if key not in existing_keys:
-            new_items.append(item)
-            existing_keys.add(key)
+        if should_skip_url(item.get("url", "")):
+            continue
+        try:
+            col_data.insert_one({
+                "url":         item.get("url"),
+                "title":       item.get("title", ""),
+                "duration_ms": item.get("duration_ms", 0),
+                "start_time":  item.get("start_time"),
+                "end_time":    item.get("end_time"),
+            })
+            added += 1
+        except DuplicateKeyError:
+            pass
+        except Exception:
+            pass
 
-    existing.extend(new_items)
-    save_json_file(DATA_FILE, existing)
-    print(f"✅ ADDED {len(new_items)} | TOTAL: {len(existing)}")
-    return jsonify({"status": "ok", "added": len(new_items), "total": len(existing)})
+    total = col_data.count_documents({})
+    print(f"✅ ADDED {added} | TOTAL: {total}")
+    return jsonify({"status": "ok", "added": added, "total": total})
 
 
 # =========================
@@ -225,22 +217,21 @@ def save_data():
 def coach():
     payload = request.get_json() or {}
     message = payload.get("message", "")
-    data = payload.get("data", {})
+    data    = payload.get("data", {})
 
     if client is None:
         return jsonify({"reply": "⚠️ GEMINI_API_KEY not set on server."}), 400
 
-    # Pull out key stats cleanly so the prompt isn't 200 lines of JSON
-    score        = data.get("score", 0)
-    total_ms     = data.get("total_time", 0)
-    total_min    = round(total_ms / 60000)
-    sessions     = data.get("sessions", 0)
-    spikes       = data.get("spikes", 0)
-    longest_min  = round(data.get("longest_focus", 0) / 60)
-    focus_score  = data.get("metrics", {}).get("focus_score", 0)
-    switch_rate  = data.get("metrics", {}).get("switch_rate", 0)
-    peak_hour    = data.get("peak_hour")
-    low_hour     = data.get("low_hour")
+    score       = data.get("score", 0)
+    total_ms    = data.get("total_time", 0)
+    total_min   = round(total_ms / 60000)
+    sessions    = data.get("sessions", 0)
+    spikes      = data.get("spikes", 0)
+    longest_min = round(data.get("longest_focus", 0) / 60)
+    focus_score = data.get("metrics", {}).get("focus_score", 0)
+    switch_rate = data.get("metrics", {}).get("switch_rate", 0)
+    peak_hour   = data.get("peak_hour")
+    low_hour    = data.get("low_hour")
 
     top_sites = data.get("top_sites", [])
     if top_sites and isinstance(top_sites[0], dict):
@@ -281,13 +272,14 @@ Their stats today (only use if relevant):
 - Top site: {top_site_name}
 - Focus score: {focus_score}/100
 - Switch rate: {switch_rate}/hr
-- Distractions (tab spikes): {spikes}
-- Longest focus block: {longest_min} min
+- Distractions: {spikes}
+- Longest focus: {longest_min} min
 - Sessions: {sessions}
 - Peak hour: {peak_hour}
 - Low hour: {low_hour}
 - Categories: {cat_summary}
 """
+
     try:
         response = client.models.generate_content(
             model="gemini-2.5-flash",
@@ -303,53 +295,41 @@ Their stats today (only use if relevant):
 # =========================
 @app.route("/data")
 def get_data():
-    raw_data = load_data()
-    history = load_history()
-    averages = compute_averages(history)
-
     categories_map = load_categories()
-    now_ist = datetime.now(IST)
-    today_str = now_ist.date().isoformat()
-    previous = get_previous_snapshot(today_str)
+    averages       = compute_averages()
+    now_ist        = datetime.now(IST)
+    today_str      = now_ist.date().isoformat()
+    previous       = get_previous_snapshot(today_str)
+    today_start    = now_ist.replace(hour=0, minute=0, second=0, microsecond=0)
 
     empty_response = {
-        "total_time": 0,
-        "sessions": 0,
-        "score": 0,
-        "top_sites": [],
-        "categories": {},
+        "total_time": 0, "sessions": 0, "score": 0,
+        "top_sites": [], "categories": {},
         "metrics": {"avg_session": 0, "switch_rate": 0, "focus_score": 0},
-        "averages": averages,
-        "spikes": 0,
-        "longest_focus": 0,
-        "peak_hour": None,
-        "low_hour": None,
-        "hourly": {},
-        "hourly_score": {},
-        "previous": previous,
+        "averages": averages, "spikes": 0, "longest_focus": 0,
+        "peak_hour": None, "low_hour": None,
+        "hourly": {}, "hourly_score": {}, "previous": previous,
     }
 
-    if not raw_data:
-        return jsonify(empty_response)
+    raw = list(col_data.find(
+        {"start_time": {"$gte": today_start.isoformat()}},
+        {"_id": 0}
+    ))
 
-    today_start = now_ist.replace(hour=0, minute=0, second=0, microsecond=0)
     today_records = []
-
-    for item in raw_data:
+    for item in raw:
         try:
             duration = int(item.get("duration_ms", 0))
             if duration < 2000:
                 continue
+            if should_skip_url(item.get("url", "")):
+                continue
             start = parse_ts(item["start_time"])
-            end = (
-                parse_ts(item["end_time"])
-                if item.get("end_time")
-                else start + timedelta(milliseconds=duration)
-            )
+            end   = parse_ts(item["end_time"]) if item.get("end_time") else start + timedelta(milliseconds=duration)
             if end < today_start:
                 continue
             start = max(start, today_start)
-            end = min(end, now_ist)
+            end   = min(end, now_ist)
             if end > start:
                 today_records.append((start, end, item.get("url", "")))
         except Exception:
@@ -358,31 +338,24 @@ def get_data():
     if not today_records:
         return jsonify(empty_response)
 
-    # ── Time & sessions ──────────────────────────────────────────────────────
     global_intervals = [(s, e) for s, e, _ in today_records]
-    merged_global = merge_intervals(global_intervals)
-    total_time = intervals_to_ms(global_intervals)
-    sessions = len(merged_global)
+    merged_global    = merge_intervals(global_intervals)
+    total_time       = intervals_to_ms(global_intervals)
+    sessions         = len(merged_global)
 
-    # ── Top sites ────────────────────────────────────────────────────────────
     site_map = defaultdict(list)
     for s, e, url in today_records:
         site_map[get_domain(url)].append((s, e))
-
     site_time = {site: intervals_to_ms(v) for site, v in site_map.items()}
-    # FIX: always return as list of [str, int] pairs (JSON-serialisable)
     top_sites = [[site, ms] for site, ms in
                  sorted(site_time.items(), key=lambda x: x[1], reverse=True)[:5]]
 
-    # ── Categories ───────────────────────────────────────────────────────────
     category_map = defaultdict(list)
     for s, e, url in today_records:
         cat = classify(get_domain(url), categories_map)
         category_map[cat].append((s, e))
-
     category_time = {cat: intervals_to_ms(v) for cat, v in category_map.items()}
 
-    # ── Score ────────────────────────────────────────────────────────────────
     weights = {
         "productive": 1.0, "neutral": 0.5, "communication": 0.6,
         "shopping": 0.2, "gaming": 0.0, "distracting": 0.0,
@@ -390,28 +363,21 @@ def get_data():
     weighted_time = sum(category_time.get(cat, 0) * w for cat, w in weights.items())
     score = round(min((weighted_time / total_time * 100) if total_time else 0, 100), 2)
 
-    # ── Metrics ──────────────────────────────────────────────────────────────
-    avg_session = int(total_time / sessions) if sessions else 0
-    total_hours = total_time / (1000 * 60 * 60)
-    switch_rate = round(sessions / total_hours, 1) if total_hours else 0
+    avg_session   = int(total_time / sessions) if sessions else 0
+    total_hours   = total_time / (1000 * 60 * 60)
+    switch_rate   = round(sessions / total_hours, 1) if total_hours else 0
+    longest_focus = max((int((e - s).total_seconds()) for s, e in merged_global), default=0)
+    focus_score   = round(min(100, (longest_focus / 3600) * 100), 1)
 
-    longest_focus = 0
-    for s, e in merged_global:
-        longest_focus = max(longest_focus, int((e - s).total_seconds()))
-
-    focus_score = round(min(100, (longest_focus / 3600) * 100), 1)
-
-    # ── Hourly ───────────────────────────────────────────────────────────────
-    hourly_total_ms = defaultdict(int)
+    hourly_total_ms      = defaultdict(int)
     hourly_productive_ms = defaultdict(int)
-
     for s, e, url in today_records:
-        cat = classify(get_domain(url), categories_map)
+        cat     = classify(get_domain(url), categories_map)
         current = s
         while current < e:
             next_hour = current.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1)
             slice_end = min(e, next_hour)
-            slice_ms = int((slice_end - current).total_seconds() * 1000)
+            slice_ms  = int((slice_end - current).total_seconds() * 1000)
             hourly_total_ms[current.hour] += slice_ms
             if cat == "productive":
                 hourly_productive_ms[current.hour] += slice_ms
@@ -423,50 +389,48 @@ def get_data():
         for h in range(24)
     }
 
-    active_hours = [h for h in range(24) if hourly_total_ms[h] > 0]
+    active_hours  = [h for h in range(24) if hourly_total_ms[h] > 0]
     peak_hour = max(active_hours, key=lambda h: hourly_score[str(h)]) if active_hours else None
     low_hour  = min(active_hours, key=lambda h: hourly_score[str(h)]) if active_hours else None
 
-    # ── Spikes ───────────────────────────────────────────────────────────────
     spikes = sum(
         1 for i in range(1, len(today_records))
         if 0 < (today_records[i][0] - today_records[i-1][1]).total_seconds() < 5
     )
 
-    # ── Save snapshot ────────────────────────────────────────────────────────
     snapshot = {
-        "date": today_str,
-        "total_ms": int(total_time),
+        "date":          today_str,
+        "total_ms":      int(total_time),
         "productive_ms": int(category_time.get("productive", 0)),
-        "sessions": sessions,
-        "score": score,
-        "spikes": spikes,
-        "category_ms": {k: int(v) for k, v in category_time.items()},
-        "top_sites": top_sites,
-        "hourly_score": hourly_score,
+        "sessions":      sessions,
+        "score":         score,
+        "spikes":        spikes,
+        "category_ms":   {k: int(v) for k, v in category_time.items()},
+        "top_sites":     top_sites,
+        "hourly_score":  hourly_score,
         "longest_focus": int(longest_focus),
     }
     save_daily_snapshot(snapshot)
 
     return jsonify({
-        "total_time": total_time,
-        "sessions": sessions,
-        "score": score,
-        "top_sites": top_sites,
-        "categories": category_time,
+        "total_time":    total_time,
+        "sessions":      sessions,
+        "score":         score,
+        "top_sites":     top_sites,
+        "categories":    category_time,
         "metrics": {
             "avg_session": avg_session,
             "switch_rate": switch_rate,
             "focus_score": focus_score,
         },
-        "averages": averages,          # ← was missing from main return before!
-        "spikes": spikes,
+        "averages":      averages,
+        "spikes":        spikes,
         "longest_focus": longest_focus,
-        "peak_hour": peak_hour,
-        "low_hour": low_hour,
-        "hourly": {str(h): int(hourly_total_ms[h]) for h in range(24)},
-        "hourly_score": hourly_score,
-        "previous": previous,
+        "peak_hour":     peak_hour,
+        "low_hour":      low_hour,
+        "hourly":        {str(h): int(hourly_total_ms[h]) for h in range(24)},
+        "hourly_score":  hourly_score,
+        "previous":      previous,
     })
 
 
