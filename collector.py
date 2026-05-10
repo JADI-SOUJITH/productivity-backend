@@ -19,6 +19,7 @@ ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://127.0.0.1:8080",
     "https://productivity-frontend.vercel.app",
+    "https://tanstack-start-app.productivity-tracker.workers.dev",
     # Add your deployed frontend URL here, e.g.:
     # "https://your-app.vercel.app",
 ]
