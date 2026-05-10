@@ -65098,5 +65098,1132 @@
     "start_time": "2026-05-08T10:19:55.858Z",
     "title": "Extensions",
     "url": "chrome://extensions/"
+  },
+  {
+    "duration_ms": 6757,
+    "end_time": "2026-05-08T10:20:04.220Z",
+    "start_time": "2026-05-08T10:19:57.463Z",
+    "title": "New tab",
+    "url": "chrome://newtab/"
+  },
+  {
+    "duration_ms": 141845,
+    "end_time": "2026-05-08T10:22:29.219Z",
+    "start_time": "2026-05-08T10:20:07.374Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 144770,
+    "end_time": "2026-05-08T10:22:32.144Z",
+    "start_time": "2026-05-08T10:20:07.374Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 3682,
+    "end_time": "2026-05-08T10:22:35.826Z",
+    "start_time": "2026-05-08T10:22:32.144Z",
+    "title": "New tab",
+    "url": "chrome://newtab/"
+  },
+  {
+    "duration_ms": 291397,
+    "end_time": "2026-05-08T10:27:29.220Z",
+    "start_time": "2026-05-08T10:22:37.823Z",
+    "title": "GitHub",
+    "url": "https://github.com/"
+  },
+  {
+    "duration_ms": 40287,
+    "end_time": "2026-05-08T10:28:14.220Z",
+    "start_time": "2026-05-08T10:27:33.933Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 4671,
+    "end_time": "2026-05-08T10:28:19.220Z",
+    "start_time": "2026-05-08T10:28:14.549Z",
+    "title": "GitHub",
+    "url": "https://github.com/"
+  },
+  {
+    "duration_ms": 8287,
+    "end_time": "2026-05-08T10:28:29.220Z",
+    "start_time": "2026-05-08T10:28:20.933Z",
+    "title": "JADI-SOUJITH",
+    "url": "https://github.com/JADI-SOUJITH"
+  },
+  {
+    "duration_ms": 2347,
+    "end_time": "2026-05-09T03:46:24.557Z",
+    "start_time": "2026-05-09T03:46:22.210Z",
+    "title": "JADI-SOUJITH",
+    "url": "https://github.com/JADI-SOUJITH"
+  },
+  {
+    "duration_ms": 1199,
+    "end_time": "2026-05-09T03:46:26.972Z",
+    "start_time": "2026-05-09T03:46:25.773Z",
+    "title": "JADI-SOUJITH",
+    "url": "https://github.com/JADI-SOUJITH"
+  },
+  {
+    "duration_ms": 3644,
+    "end_time": "2026-05-09T03:46:30.616Z",
+    "start_time": "2026-05-09T03:46:26.972Z",
+    "title": "New tab",
+    "url": "chrome://newtab/"
+  },
+  {
+    "duration_ms": 4760,
+    "end_time": "2026-05-09T03:46:36.552Z",
+    "start_time": "2026-05-09T03:46:31.792Z",
+    "title": "Vedic.dev",
+    "url": "https://www.vedic.dev/home/dashboard"
+  },
+  {
+    "duration_ms": 271128,
+    "end_time": "2026-05-09T03:51:11.554Z",
+    "start_time": "2026-05-09T03:46:40.426Z",
+    "title": "Vedic.dev",
+    "url": "https://www.vedic.dev/home/live-session"
+  },
+  {
+    "duration_ms": 217745,
+    "end_time": "2026-05-09T03:54:51.554Z",
+    "start_time": "2026-05-09T03:51:13.809Z",
+    "title": "Learning Platform",
+    "url": "https://www.vedic.dev/home/live-session"
+  },
+  {
+    "duration_ms": 3955,
+    "end_time": "2026-05-09T03:55:06.555Z",
+    "start_time": "2026-05-09T03:55:02.600Z",
+    "title": "Vedic.dev",
+    "url": "https://www.vedic.dev/home/live-session"
+  },
+  {
+    "duration_ms": 43841,
+    "end_time": "2026-05-09T03:55:51.555Z",
+    "start_time": "2026-05-09T03:55:07.714Z",
+    "title": "JADI-SOUJITH",
+    "url": "https://github.com/JADI-SOUJITH"
+  },
+  {
+    "duration_ms": 131839,
+    "end_time": "2026-05-09T03:58:06.648Z",
+    "start_time": "2026-05-09T03:55:54.809Z",
+    "title": "Vedic.dev",
+    "url": "https://www.vedic.dev/home/live-session"
+  },
+  {
+    "duration_ms": 136783,
+    "end_time": "2026-05-09T03:58:11.592Z",
+    "start_time": "2026-05-09T03:55:54.809Z",
+    "title": "Vedic.dev",
+    "url": "https://www.vedic.dev/home/live-session"
+  },
+  {
+    "duration_ms": 1167,
+    "end_time": "2026-05-09T03:58:12.759Z",
+    "start_time": "2026-05-09T03:58:11.592Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 1328,
+    "end_time": "2026-05-09T03:58:14.087Z",
+    "start_time": "2026-05-09T03:58:12.759Z",
+    "title": "Vedic.dev",
+    "url": "https://www.vedic.dev/home/live-session"
+  },
+  {
+    "duration_ms": 1091,
+    "end_time": "2026-05-09T03:58:15.886Z",
+    "start_time": "2026-05-09T03:58:14.795Z",
+    "title": "Extensions",
+    "url": "chrome://extensions/"
+  },
+  {
+    "duration_ms": 1110,
+    "end_time": "2026-05-09T03:58:17.526Z",
+    "start_time": "2026-05-09T03:58:16.416Z",
+    "title": "Vedic.dev",
+    "url": "https://www.vedic.dev/home/live-session"
+  },
+  {
+    "duration_ms": 156409,
+    "end_time": "2026-05-09T04:01:01.651Z",
+    "start_time": "2026-05-09T03:58:25.242Z",
+    "title": "Vedic.dev",
+    "url": "https://www.vedic.dev/home/live-session"
+  },
+  {
+    "duration_ms": 4045,
+    "end_time": "2026-05-09T04:01:06.653Z",
+    "start_time": "2026-05-09T04:01:02.608Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/18Wv2GNoOqXnKew3tiaNfOmJtG8ncLBu_9CVoioWh9Lg/viewform?edit_requested=true"
+  },
+  {
+    "duration_ms": 5824,
+    "end_time": "2026-05-09T04:01:08.432Z",
+    "start_time": "2026-05-09T04:01:02.608Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/18Wv2GNoOqXnKew3tiaNfOmJtG8ncLBu_9CVoioWh9Lg/viewform?edit_requested=true"
+  },
+  {
+    "duration_ms": 15776,
+    "end_time": "2026-05-09T04:01:26.647Z",
+    "start_time": "2026-05-09T04:01:10.871Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/18Wv2GNoOqXnKew3tiaNfOmJtG8ncLBu_9CVoioWh9Lg/viewform?edit_requested=true&pli=1"
+  },
+  {
+    "duration_ms": 17276,
+    "end_time": "2026-05-09T04:01:28.147Z",
+    "start_time": "2026-05-09T04:01:10.871Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/18Wv2GNoOqXnKew3tiaNfOmJtG8ncLBu_9CVoioWh9Lg/viewform?edit_requested=true&pli=1"
+  },
+  {
+    "duration_ms": 12365,
+    "end_time": "2026-05-09T04:01:41.652Z",
+    "start_time": "2026-05-09T04:01:29.287Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 6391,
+    "end_time": "2026-05-09T04:01:51.647Z",
+    "start_time": "2026-05-09T04:01:45.256Z",
+    "title": "New tab",
+    "url": "chrome://newtab/"
+  },
+  {
+    "duration_ms": 8747,
+    "end_time": "2026-05-09T04:01:54.003Z",
+    "start_time": "2026-05-09T04:01:45.256Z",
+    "title": "New tab",
+    "url": "chrome://newtab/"
+  },
+  {
+    "duration_ms": 1267,
+    "end_time": "2026-05-09T04:01:55.270Z",
+    "start_time": "2026-05-09T04:01:54.003Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 1367,
+    "end_time": "2026-05-09T04:01:56.637Z",
+    "start_time": "2026-05-09T04:01:55.270Z",
+    "title": "New tab",
+    "url": "chrome://newtab/"
+  },
+  {
+    "duration_ms": 7446,
+    "end_time": "2026-05-09T04:02:06.651Z",
+    "start_time": "2026-05-09T04:01:59.205Z",
+    "title": "New tab",
+    "url": "chrome://newtab/"
+  },
+  {
+    "duration_ms": 8188,
+    "end_time": "2026-05-09T04:02:07.393Z",
+    "start_time": "2026-05-09T04:01:59.205Z",
+    "title": "New tab",
+    "url": "chrome://newtab/"
+  },
+  {
+    "duration_ms": 27645,
+    "end_time": "2026-05-09T04:02:36.648Z",
+    "start_time": "2026-05-09T04:02:09.003Z",
+    "title": "Smart Interviews",
+    "url": "https://smartinterviews.in/login?returnUrl=%2F"
+  },
+  {
+    "duration_ms": 32261,
+    "end_time": "2026-05-09T04:02:41.264Z",
+    "start_time": "2026-05-09T04:02:09.003Z",
+    "title": "Smart Interviews",
+    "url": "https://smartinterviews.in/login?returnUrl=%2F"
+  },
+  {
+    "duration_ms": 1214,
+    "end_time": "2026-05-09T04:02:42.481Z",
+    "start_time": "2026-05-09T04:02:41.267Z",
+    "title": "Smart Interviews - Ace your next coding interview",
+    "url": "https://smartinterviews.in/"
+  },
+  {
+    "duration_ms": 6224,
+    "end_time": "2026-05-09T04:02:51.649Z",
+    "start_time": "2026-05-09T04:02:45.425Z",
+    "title": "Smart Interviews - Ace your next coding interview",
+    "url": "https://smartinterviews.in/"
+  },
+  {
+    "duration_ms": 9297,
+    "end_time": "2026-05-09T04:02:54.722Z",
+    "start_time": "2026-05-09T04:02:45.425Z",
+    "title": "Smart Interviews - Ace your next coding interview",
+    "url": "https://smartinterviews.in/"
+  },
+  {
+    "duration_ms": 5253,
+    "end_time": "2026-05-09T04:03:06.652Z",
+    "start_time": "2026-05-09T04:03:01.399Z",
+    "title": "Smart Interviews",
+    "url": "https://smartinterviews.in/dashboard"
+  },
+  {
+    "duration_ms": 4971,
+    "end_time": "2026-05-09T04:03:11.652Z",
+    "start_time": "2026-05-09T04:03:06.681Z",
+    "title": "Smart Interviews",
+    "url": "https://smartinterviews.in/dashboard/batch/BVRITN-2027B-P3"
+  },
+  {
+    "duration_ms": 47802,
+    "end_time": "2026-05-09T04:04:01.653Z",
+    "start_time": "2026-05-09T04:03:13.851Z",
+    "title": "Smart Interviews",
+    "url": "https://smartinterviews.in/report/BVRITN-2027B-P3"
+  },
+  {
+    "duration_ms": 48140,
+    "end_time": "2026-05-09T04:04:01.991Z",
+    "start_time": "2026-05-09T04:03:13.851Z",
+    "title": "Smart Interviews",
+    "url": "https://smartinterviews.in/report/BVRITN-2027B-P3"
+  },
+  {
+    "duration_ms": 7909,
+    "end_time": "2026-05-09T04:04:11.653Z",
+    "start_time": "2026-05-09T04:04:03.744Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 8472,
+    "end_time": "2026-05-09T04:04:12.216Z",
+    "start_time": "2026-05-09T04:04:03.744Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 3303,
+    "end_time": "2026-05-09T04:04:15.519Z",
+    "start_time": "2026-05-09T04:04:12.216Z",
+    "title": "New tab",
+    "url": "chrome://newtab/"
+  },
+  {
+    "duration_ms": 1315,
+    "end_time": "2026-05-09T04:04:16.834Z",
+    "start_time": "2026-05-09T04:04:15.519Z",
+    "title": "Practice | GeeksforGeeks | A computer science portal for geeks",
+    "url": "https://www.geeksforgeeks.org/batch/gfg-160-problems?tab=Resources"
+  },
+  {
+    "duration_ms": 6880,
+    "end_time": "2026-05-09T04:04:26.653Z",
+    "start_time": "2026-05-09T04:04:19.773Z",
+    "title": "SOUJITH JADI - Padmasri Dr BV Raju Institute of Technology (BVRIT) Medak | GeeksforGeeks Profile",
+    "url": "https://www.geeksforgeeks.org/profile/soujit9lcv"
+  },
+  {
+    "duration_ms": 9743,
+    "end_time": "2026-05-09T04:04:36.652Z",
+    "start_time": "2026-05-09T04:04:26.909Z",
+    "title": "GfG 160 - 160 Days of Problem Solving",
+    "url": "https://www.geeksforgeeks.org/batch/gfg-160-problems?tab=Resources"
+  },
+  {
+    "duration_ms": 14445,
+    "end_time": "2026-05-09T04:04:41.354Z",
+    "start_time": "2026-05-09T04:04:26.909Z",
+    "title": "GfG 160 - 160 Days of Problem Solving",
+    "url": "https://www.geeksforgeeks.org/batch/gfg-160-problems?tab=Resources"
+  },
+  {
+    "duration_ms": 5295,
+    "end_time": "2026-05-09T04:04:51.650Z",
+    "start_time": "2026-05-09T04:04:46.355Z",
+    "title": "GfG 160 - 160 Days of Problem Solving",
+    "url": "https://www.geeksforgeeks.org/batch/gfg-160-problems?tab=Resources"
+  },
+  {
+    "duration_ms": 6638,
+    "end_time": "2026-05-09T04:04:52.993Z",
+    "start_time": "2026-05-09T04:04:46.355Z",
+    "title": "GfG 160 - 160 Days of Problem Solving",
+    "url": "https://www.geeksforgeeks.org/batch/gfg-160-problems?tab=Resources"
+  },
+  {
+    "duration_ms": 3211,
+    "end_time": "2026-05-09T04:04:56.204Z",
+    "start_time": "2026-05-09T04:04:52.993Z",
+    "title": "New tab",
+    "url": "chrome://newtab/"
+  },
+  {
+    "duration_ms": 1989,
+    "end_time": "2026-05-09T04:04:58.194Z",
+    "start_time": "2026-05-09T04:04:56.205Z",
+    "title": "Vedic.dev",
+    "url": "https://www.vedic.dev/home/dashboard"
+  },
+  {
+    "duration_ms": 6229,
+    "end_time": "2026-05-09T04:05:06.653Z",
+    "start_time": "2026-05-09T04:05:00.424Z",
+    "title": "Vedic.dev",
+    "url": "https://www.vedic.dev/home/program_stats/geeksforgeeks"
+  },
+  {
+    "duration_ms": 16826,
+    "end_time": "2026-05-09T04:05:26.649Z",
+    "start_time": "2026-05-09T04:05:09.823Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 19516,
+    "end_time": "2026-05-09T04:05:29.339Z",
+    "start_time": "2026-05-09T04:05:09.823Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 6366,
+    "end_time": "2026-05-09T04:05:36.544Z",
+    "start_time": "2026-05-09T04:05:30.178Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 2047,
+    "end_time": "2026-05-09T04:05:38.591Z",
+    "start_time": "2026-05-09T04:05:36.544Z",
+    "title": "GfG 160 - 160 Days of Problem Solving",
+    "url": "https://www.geeksforgeeks.org/batch/gfg-160-problems?tab=Resources"
+  },
+  {
+    "duration_ms": 2273,
+    "end_time": "2026-05-09T04:05:40.864Z",
+    "start_time": "2026-05-09T04:05:38.591Z",
+    "title": "Vedic.dev",
+    "url": "https://www.vedic.dev/home/program_stats/geeksforgeeks"
+  },
+  {
+    "duration_ms": 6801,
+    "end_time": "2026-05-09T04:05:51.652Z",
+    "start_time": "2026-05-09T04:05:44.851Z",
+    "title": "New tab",
+    "url": "chrome://newtab/"
+  },
+  {
+    "duration_ms": 3770,
+    "end_time": "2026-05-09T04:05:56.650Z",
+    "start_time": "2026-05-09T04:05:52.880Z",
+    "title": "Dashboard | HackerRank",
+    "url": "https://www.hackerrank.com/dashboard"
+  },
+  {
+    "duration_ms": 6017,
+    "end_time": "2026-05-09T04:05:58.897Z",
+    "start_time": "2026-05-09T04:05:52.880Z",
+    "title": "Dashboard | HackerRank",
+    "url": "https://www.hackerrank.com/dashboard"
+  },
+  {
+    "duration_ms": 7303,
+    "end_time": "2026-05-09T04:06:06.201Z",
+    "start_time": "2026-05-09T04:05:58.898Z",
+    "title": "SOUJITH JADI - soujithjadi | HackerRank",
+    "url": "https://www.hackerrank.com/profile/soujithjadi"
+  },
+  {
+    "duration_ms": 5271,
+    "end_time": "2026-05-09T04:06:11.472Z",
+    "start_time": "2026-05-09T04:06:06.201Z",
+    "title": "SOUJITH JADI - soujithjadi | HackerRank",
+    "url": "https://www.hackerrank.com/profile/soujithjadi"
+  },
+  {
+    "duration_ms": 5469,
+    "end_time": "2026-05-09T04:06:21.650Z",
+    "start_time": "2026-05-09T04:06:16.181Z",
+    "title": "SOUJITH JADI - soujithjadi | HackerRank",
+    "url": "https://www.hackerrank.com/profile/soujithjadi"
+  },
+  {
+    "duration_ms": 3899,
+    "end_time": "2026-05-09T04:06:26.654Z",
+    "start_time": "2026-05-09T04:06:22.755Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 6570,
+    "end_time": "2026-05-09T04:06:29.325Z",
+    "start_time": "2026-05-09T04:06:22.755Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 1739,
+    "end_time": "2026-05-09T04:06:31.064Z",
+    "start_time": "2026-05-09T04:06:29.325Z",
+    "title": "SOUJITH JADI - soujithjadi | HackerRank",
+    "url": "https://www.hackerrank.com/profile/soujithjadi"
+  },
+  {
+    "duration_ms": 1164,
+    "end_time": "2026-05-09T04:06:32.228Z",
+    "start_time": "2026-05-09T04:06:31.064Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 2709,
+    "end_time": "2026-05-09T04:06:34.937Z",
+    "start_time": "2026-05-09T04:06:32.228Z",
+    "title": "New tab",
+    "url": "chrome://newtab/"
+  },
+  {
+    "duration_ms": 4383,
+    "end_time": "2026-05-09T04:06:39.320Z",
+    "start_time": "2026-05-09T04:06:34.937Z",
+    "title": "LeetCode - The World's Leading Online Programming Learning Platform",
+    "url": "https://leetcode.com/problemset/"
+  },
+  {
+    "duration_ms": 3181,
+    "end_time": "2026-05-09T04:06:42.501Z",
+    "start_time": "2026-05-09T04:06:39.320Z",
+    "title": "JADISOUJITH - LeetCode Profile",
+    "url": "https://leetcode.com/u/JADISOUJITH/"
+  },
+  {
+    "duration_ms": 2412,
+    "end_time": "2026-05-09T04:06:44.913Z",
+    "start_time": "2026-05-09T04:06:42.501Z",
+    "title": "JADI-SOUJITH",
+    "url": "https://github.com/JADI-SOUJITH"
+  },
+  {
+    "duration_ms": 4190,
+    "end_time": "2026-05-09T04:06:49.103Z",
+    "start_time": "2026-05-09T04:06:44.913Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 2741,
+    "end_time": "2026-05-09T04:06:51.845Z",
+    "start_time": "2026-05-09T04:06:49.104Z",
+    "title": "New tab",
+    "url": "chrome://newtab/"
+  },
+  {
+    "duration_ms": 1904,
+    "end_time": "2026-05-09T04:06:53.749Z",
+    "start_time": "2026-05-09T04:06:51.845Z",
+    "title": "Codeforces",
+    "url": "https://codeforces.com/"
+  },
+  {
+    "duration_ms": 2530,
+    "end_time": "2026-05-09T04:06:56.279Z",
+    "start_time": "2026-05-09T04:06:53.749Z",
+    "title": "Verification",
+    "url": "https://codeforces.com/enter?back=%2F"
+  },
+  {
+    "duration_ms": 4223,
+    "end_time": "2026-05-09T04:07:01.442Z",
+    "start_time": "2026-05-09T04:06:57.219Z",
+    "title": "Login - Codeforces",
+    "url": "https://codeforces.com/enter?back=%2F"
+  },
+  {
+    "duration_ms": 2749,
+    "end_time": "2026-05-09T04:07:04.191Z",
+    "start_time": "2026-05-09T04:07:01.442Z",
+    "title": "Sign in - Google Accounts",
+    "url": "https://accounts.google.com/v3/signin/accountchooser?client_id=342202968788-k602p7pcc4btm9b2ftjvin873iagl6qa.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fcodeforces.com%2Fenter%2FGmail&response_type=code&scope=email&state=c44469cd9c297303b8f921827377c749&dsh=S50638594%3A1778299620640550&o2v=1&service=lso&flowName=GeneralOAuthFlow&opparams=%253F&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAMTc6SPo7omhB87IXDdaKv_2vUxWDjp9lQI5yn8PKaQAgP0O1dJHapA4y_SBPZZC1FPA4s4bItzelAo6okF8EtFMpkKIsSD-a8jox28JvS--eNQEexYXRTC7xApB7yi0b2-PpSUSKaaMOHzw-0lZ9yQNDRo1XbjINlloelG9TH0vNDUyLJ4NjAtOpjn6o8Y3uw3UmSzE2FXxgSw8OmQVdMH6BnFNDYicCPOfwXnIzREPN1nDoX9lK1Bk8eCsV8Vb-95un6F1f08a2w5e_WBe6wUeyBRv3urLF_5twd3QvJE428IV304ggKgSnJ7wRmlDtgC1qy5H6pGMT_8WdbXOH9834lkdVRgRIl0pvyyFOvij7OYH3Fx6qNwYs9BnrgSIVPUHBXS_-y-hpd3b5Zz3Hevy6TnZuDfGritB7Xg_KCpgxCvKbnvKfKMvRoV8y0rmCneYj-2XmmSqz_GGjssE2wweIOOtw%26flowName%3DGeneralOAuthFlow%26as%3DS50638594%253A1778299620640550%26client_id%3D342202968788-k602p7pcc4btm9b2ftjvin873iagl6qa.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fcodeforces.com"
+  },
+  {
+    "duration_ms": 1159,
+    "end_time": "2026-05-09T04:07:05.734Z",
+    "start_time": "2026-05-09T04:07:04.575Z",
+    "title": "Sign in - Google Accounts",
+    "url": "https://accounts.google.com/v3/signin/accountchooser?client_id=342202968788-k602p7pcc4btm9b2ftjvin873iagl6qa.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fcodeforces.com%2Fenter%2FGmail&response_type=code&scope=email&state=c44469cd9c297303b8f921827377c749&dsh=S50638594%3A1778299620640550&o2v=1&service=lso&flowName=GeneralOAuthFlow&opparams=%253F&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAMTc6SPo7omhB87IXDdaKv_2vUxWDjp9lQI5yn8PKaQAgP0O1dJHapA4y_SBPZZC1FPA4s4bItzelAo6okF8EtFMpkKIsSD-a8jox28JvS--eNQEexYXRTC7xApB7yi0b2-PpSUSKaaMOHzw-0lZ9yQNDRo1XbjINlloelG9TH0vNDUyLJ4NjAtOpjn6o8Y3uw3UmSzE2FXxgSw8OmQVdMH6BnFNDYicCPOfwXnIzREPN1nDoX9lK1Bk8eCsV8Vb-95un6F1f08a2w5e_WBe6wUeyBRv3urLF_5twd3QvJE428IV304ggKgSnJ7wRmlDtgC1qy5H6pGMT_8WdbXOH9834lkdVRgRIl0pvyyFOvij7OYH3Fx6qNwYs9BnrgSIVPUHBXS_-y-hpd3b5Zz3Hevy6TnZuDfGritB7Xg_KCpgxCvKbnvKfKMvRoV8y0rmCneYj-2XmmSqz_GGjssE2wweIOOtw%26flowName%3DGeneralOAuthFlow%26as%3DS50638594%253A1778299620640550%26client_id%3D342202968788-k602p7pcc4btm9b2ftjvin873iagl6qa.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fcodeforces.com"
+  },
+  {
+    "duration_ms": 3727,
+    "end_time": "2026-05-09T04:07:11.654Z",
+    "start_time": "2026-05-09T04:07:07.927Z",
+    "title": "soujithjadi - Codeforces",
+    "url": "https://codeforces.com/profile/soujithjadi"
+  },
+  {
+    "duration_ms": 3861,
+    "end_time": "2026-05-09T04:07:11.788Z",
+    "start_time": "2026-05-09T04:07:07.927Z",
+    "title": "soujithjadi - Codeforces",
+    "url": "https://codeforces.com/profile/soujithjadi"
+  },
+  {
+    "duration_ms": 1890,
+    "end_time": "2026-05-09T04:07:13.678Z",
+    "start_time": "2026-05-09T04:07:11.788Z",
+    "title": "JADI-SOUJITH",
+    "url": "https://github.com/JADI-SOUJITH"
+  },
+  {
+    "duration_ms": 5954,
+    "end_time": "2026-05-09T04:07:19.633Z",
+    "start_time": "2026-05-09T04:07:13.679Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 3121,
+    "end_time": "2026-05-09T04:07:22.755Z",
+    "start_time": "2026-05-09T04:07:19.634Z",
+    "title": "New tab",
+    "url": "chrome://newtab/"
+  },
+  {
+    "duration_ms": 1435,
+    "end_time": "2026-05-09T04:07:24.190Z",
+    "start_time": "2026-05-09T04:07:22.755Z",
+    "title": "CodeChef - Learn and Practice Coding with Problems",
+    "url": "https://www.codechef.com/"
+  },
+  {
+    "duration_ms": 2227,
+    "end_time": "2026-05-09T04:07:26.418Z",
+    "start_time": "2026-05-09T04:07:24.191Z",
+    "title": "CodeChef Login",
+    "url": "https://www.codechef.com/login?destination=/"
+  },
+  {
+    "duration_ms": 5529,
+    "end_time": "2026-05-09T04:07:36.653Z",
+    "start_time": "2026-05-09T04:07:31.124Z",
+    "title": "CodeChef: Practical coding for everyone",
+    "url": "https://www.codechef.com/dashboard"
+  },
+  {
+    "duration_ms": 8191,
+    "end_time": "2026-05-09T04:07:39.315Z",
+    "start_time": "2026-05-09T04:07:31.124Z",
+    "title": "CodeChef: Practical coding for everyone",
+    "url": "https://www.codechef.com/dashboard"
+  },
+  {
+    "duration_ms": 100155,
+    "end_time": "2026-05-09T04:09:21.651Z",
+    "start_time": "2026-05-09T04:07:41.496Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 24274,
+    "end_time": "2026-05-09T04:09:46.656Z",
+    "start_time": "2026-05-09T04:09:22.382Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 121708,
+    "end_time": "2026-05-09T04:11:51.657Z",
+    "start_time": "2026-05-09T04:09:49.949Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 125363,
+    "end_time": "2026-05-09T04:11:55.312Z",
+    "start_time": "2026-05-09T04:09:49.949Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 3623,
+    "end_time": "2026-05-09T04:11:59.084Z",
+    "start_time": "2026-05-09T04:11:55.461Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/u/1/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 485489,
+    "end_time": "2026-05-09T04:20:11.674Z",
+    "start_time": "2026-05-09T04:12:06.185Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/u/1/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 489116,
+    "end_time": "2026-05-09T04:20:15.301Z",
+    "start_time": "2026-05-09T04:12:06.185Z",
+    "title": "BVRITN 2027 Batch Student Self Rating Form",
+    "url": "https://docs.google.com/forms/u/1/d/e/1FAIpQLSemxyjiKogmo8vAx648pVHTUXsJlNKbVfOYHvhcOjxVooaSjA/formResponse?pli=1"
+  },
+  {
+    "duration_ms": 3428,
+    "end_time": "2026-05-09T04:20:21.670Z",
+    "start_time": "2026-05-09T04:20:18.242Z",
+    "title": "JADI-SOUJITH",
+    "url": "https://github.com/JADI-SOUJITH"
+  },
+  {
+    "duration_ms": 3509,
+    "end_time": "2026-05-09T04:20:21.751Z",
+    "start_time": "2026-05-09T04:20:18.242Z",
+    "title": "JADI-SOUJITH",
+    "url": "https://github.com/JADI-SOUJITH"
+  },
+  {
+    "duration_ms": 1080,
+    "end_time": "2026-05-09T04:20:22.831Z",
+    "start_time": "2026-05-09T04:20:21.751Z",
+    "title": "Extensions",
+    "url": "chrome://extensions/"
+  },
+  {
+    "duration_ms": 2184,
+    "end_time": "2026-05-09T04:20:25.476Z",
+    "start_time": "2026-05-09T04:20:23.292Z",
+    "title": "Extensions",
+    "url": "chrome://extensions/"
+  },
+  {
+    "duration_ms": 1008371,
+    "end_time": "2026-05-09T04:37:15.617Z",
+    "start_time": "2026-05-09T04:20:27.246Z",
+    "title": "WiseAcad - Master Coding",
+    "url": "https://dev.suntekcorp.com/chapter/1c8f0006-0ba1-45aa-86cb-a479886762b0"
+  },
+  {
+    "duration_ms": 1524,
+    "end_time": "2026-05-10T05:27:38.950Z",
+    "start_time": "2026-05-10T05:27:37.426Z",
+    "title": "WiseAcad - Master Coding",
+    "url": "https://dev.suntekcorp.com/chapter/1c8f0006-0ba1-45aa-86cb-a479886762b0"
+  },
+  {
+    "duration_ms": 1159,
+    "end_time": "2026-05-10T05:27:40.556Z",
+    "start_time": "2026-05-10T05:27:39.397Z",
+    "title": "Extensions",
+    "url": "chrome://extensions/"
+  },
+  {
+    "duration_ms": 1151,
+    "end_time": "2026-05-10T05:27:44.330Z",
+    "start_time": "2026-05-10T05:27:43.179Z",
+    "title": "JADI-SOUJITH",
+    "url": "https://github.com/JADI-SOUJITH"
+  },
+  {
+    "duration_ms": 2457,
+    "end_time": "2026-05-10T05:27:46.787Z",
+    "start_time": "2026-05-10T05:27:44.330Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 7499,
+    "end_time": "2026-05-10T05:28:01.912Z",
+    "start_time": "2026-05-10T05:27:54.413Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 4698,
+    "end_time": "2026-05-10T05:28:06.912Z",
+    "start_time": "2026-05-10T05:28:02.214Z",
+    "title": "JADI-SOUJITH",
+    "url": "https://github.com/JADI-SOUJITH"
+  },
+  {
+    "duration_ms": 7055,
+    "end_time": "2026-05-10T05:28:16.915Z",
+    "start_time": "2026-05-10T05:28:09.860Z",
+    "title": "Your Repositories",
+    "url": "https://github.com/JADI-SOUJITH?tab=repositories"
+  },
+  {
+    "duration_ms": 7266,
+    "end_time": "2026-05-10T05:28:17.126Z",
+    "start_time": "2026-05-10T05:28:09.860Z",
+    "title": "Your Repositories",
+    "url": "https://github.com/JADI-SOUJITH?tab=repositories"
+  },
+  {
+    "duration_ms": 2722,
+    "end_time": "2026-05-10T05:28:19.848Z",
+    "start_time": "2026-05-10T05:28:17.126Z",
+    "title": "DEXTER 1",
+    "url": "https://chatgpt.com/c/69f30813-d2cc-83e8-8d6e-ed2624d1339f"
+  },
+  {
+    "duration_ms": 3257,
+    "end_time": "2026-05-10T05:28:23.105Z",
+    "start_time": "2026-05-10T05:28:19.848Z",
+    "title": "WiseAcad - Master Coding",
+    "url": "https://dev.suntekcorp.com/chapter/1c8f0006-0ba1-45aa-86cb-a479886762b0"
+  },
+  {
+    "duration_ms": 1142,
+    "end_time": "2026-05-10T05:28:24.248Z",
+    "start_time": "2026-05-10T05:28:23.106Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 1390,
+    "end_time": "2026-05-10T05:28:25.638Z",
+    "start_time": "2026-05-10T05:28:24.248Z",
+    "title": "WiseAcad - Master Coding",
+    "url": "https://dev.suntekcorp.com/chapter/1c8f0006-0ba1-45aa-86cb-a479886762b0"
+  },
+  {
+    "duration_ms": 4482,
+    "end_time": "2026-05-10T05:28:30.121Z",
+    "start_time": "2026-05-10T05:28:25.639Z",
+    "title": "WiseAcad - Master Coding",
+    "url": "https://dev.suntekcorp.com/courses/2052ec72-022e-4852-97f7-5c7e80b681f3"
+  },
+  {
+    "duration_ms": 20163,
+    "end_time": "2026-05-10T05:28:51.912Z",
+    "start_time": "2026-05-10T05:28:31.749Z",
+    "title": "Extensions",
+    "url": "chrome://extensions/"
+  },
+  {
+    "duration_ms": 414685,
+    "end_time": "2026-05-10T05:35:46.911Z",
+    "start_time": "2026-05-10T05:28:52.226Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 18033,
+    "end_time": "2026-05-10T05:36:06.911Z",
+    "start_time": "2026-05-10T05:35:48.878Z",
+    "title": "DEXTER 1",
+    "url": "https://chatgpt.com/c/69f30813-d2cc-83e8-8d6e-ed2624d1339f"
+  },
+  {
+    "duration_ms": 37423,
+    "end_time": "2026-05-10T05:36:46.911Z",
+    "start_time": "2026-05-10T05:36:09.488Z",
+    "title": "DEXTER 1",
+    "url": "https://chatgpt.com/"
+  },
+  {
+    "duration_ms": 31717,
+    "end_time": "2026-05-10T05:37:21.911Z",
+    "start_time": "2026-05-10T05:36:50.194Z",
+    "title": "ChatGPT",
+    "url": "https://chatgpt.com/c/6a00194f-b398-83e8-9657-39d2295acf26"
+  },
+  {
+    "duration_ms": 35440,
+    "end_time": "2026-05-10T05:37:25.634Z",
+    "start_time": "2026-05-10T05:36:50.194Z",
+    "title": "ChatGPT",
+    "url": "https://chatgpt.com/c/6a00194f-b398-83e8-9657-39d2295acf26"
+  },
+  {
+    "duration_ms": 2013,
+    "end_time": "2026-05-10T05:37:28.045Z",
+    "start_time": "2026-05-10T05:37:26.032Z",
+    "title": "OpenMTP | Android File Transfer for macOS - Samsung phone, Garmin, FujiFilm, Macbook Apple Silicon M1/M2 (arm64) and Intel (x64) support",
+    "url": "https://openmtp.ganeshrvel.com/?utm_source=chatgpt.com"
+  },
+  {
+    "duration_ms": 32538,
+    "end_time": "2026-05-10T05:38:01.911Z",
+    "start_time": "2026-05-10T05:37:29.373Z",
+    "title": "Access Android on Mac",
+    "url": "https://chatgpt.com/c/6a00194f-b398-83e8-9657-39d2295acf26"
+  },
+  {
+    "duration_ms": 7742,
+    "end_time": "2026-05-10T05:38:11.907Z",
+    "start_time": "2026-05-10T05:38:04.165Z",
+    "title": "Connect Android to Mac easily (USB, Wi-Fi) | MacDroid app",
+    "url": "https://www.macdroid.app/?utm_source=chatgpt.com"
+  },
+  {
+    "duration_ms": 68557,
+    "end_time": "2026-05-10T05:39:21.910Z",
+    "start_time": "2026-05-10T05:38:13.353Z",
+    "title": "Access Android on Mac",
+    "url": "https://chatgpt.com/c/6a00194f-b398-83e8-9657-39d2295acf26"
+  },
+  {
+    "duration_ms": 33220,
+    "end_time": "2026-05-10T05:39:56.909Z",
+    "start_time": "2026-05-10T05:39:23.689Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 36451,
+    "end_time": "2026-05-10T05:40:00.140Z",
+    "start_time": "2026-05-10T05:39:23.689Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 281086,
+    "end_time": "2026-05-10T05:44:46.916Z",
+    "start_time": "2026-05-10T05:40:05.830Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 3684,
+    "end_time": "2026-05-10T05:44:51.914Z",
+    "start_time": "2026-05-10T05:44:48.230Z",
+    "title": "Your Repositories",
+    "url": "https://github.com/JADI-SOUJITH?tab=repositories"
+  },
+  {
+    "duration_ms": 3986,
+    "end_time": "2026-05-10T05:44:52.216Z",
+    "start_time": "2026-05-10T05:44:48.230Z",
+    "title": "Your Repositories",
+    "url": "https://github.com/JADI-SOUJITH?tab=repositories"
+  },
+  {
+    "duration_ms": 1448,
+    "end_time": "2026-05-10T05:44:53.664Z",
+    "start_time": "2026-05-10T05:44:52.216Z",
+    "title": "New repository",
+    "url": "https://github.com/new"
+  },
+  {
+    "duration_ms": 1249,
+    "end_time": "2026-05-10T05:44:54.913Z",
+    "start_time": "2026-05-10T05:44:53.664Z",
+    "title": "WiseAcad - Master Coding",
+    "url": "https://dev.suntekcorp.com/chapter/1c8f0006-0ba1-45aa-86cb-a479886762b0"
+  },
+  {
+    "duration_ms": 15337,
+    "end_time": "2026-05-10T05:45:11.916Z",
+    "start_time": "2026-05-10T05:44:56.579Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 19578,
+    "end_time": "2026-05-10T05:45:16.157Z",
+    "start_time": "2026-05-10T05:44:56.579Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 1471,
+    "end_time": "2026-05-10T05:45:17.628Z",
+    "start_time": "2026-05-10T05:45:16.157Z",
+    "title": "New repository",
+    "url": "https://github.com/new"
+  },
+  {
+    "duration_ms": 3175,
+    "end_time": "2026-05-10T05:45:20.804Z",
+    "start_time": "2026-05-10T05:45:17.629Z",
+    "title": "Your Repositories",
+    "url": "https://github.com/JADI-SOUJITH?tab=repositories"
+  },
+  {
+    "duration_ms": 11758,
+    "end_time": "2026-05-10T05:45:36.915Z",
+    "start_time": "2026-05-10T05:45:25.157Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 16595,
+    "end_time": "2026-05-10T05:45:41.752Z",
+    "start_time": "2026-05-10T05:45:25.157Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 1453,
+    "end_time": "2026-05-10T05:45:44.193Z",
+    "start_time": "2026-05-10T05:45:42.740Z",
+    "title": "Extensions",
+    "url": "chrome://extensions/"
+  },
+  {
+    "duration_ms": 3987,
+    "end_time": "2026-05-10T05:45:48.180Z",
+    "start_time": "2026-05-10T05:45:44.193Z",
+    "title": "New repository",
+    "url": "https://github.com/new"
+  },
+  {
+    "duration_ms": 2891,
+    "end_time": "2026-05-10T05:45:51.071Z",
+    "start_time": "2026-05-10T05:45:48.180Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 5356,
+    "end_time": "2026-05-10T05:45:56.427Z",
+    "start_time": "2026-05-10T05:45:51.071Z",
+    "title": "New repository",
+    "url": "https://github.com/new"
+  },
+  {
+    "duration_ms": 34006,
+    "end_time": "2026-05-10T05:46:31.916Z",
+    "start_time": "2026-05-10T05:45:57.910Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 36450,
+    "end_time": "2026-05-10T05:46:34.360Z",
+    "start_time": "2026-05-10T05:45:57.910Z",
+    "title": "Greeting - Claude",
+    "url": "https://claude.ai/chat/4f812314-bb65-495b-b9bf-7ca44e520bd9"
+  },
+  {
+    "duration_ms": 5843,
+    "end_time": "2026-05-10T05:46:40.407Z",
+    "start_time": "2026-05-10T05:46:34.564Z",
+    "title": "AI Productivity Analyzer \u2014 Dashboard",
+    "url": "http://localhost:8080/"
+  },
+  {
+    "duration_ms": 5285,
+    "end_time": "2026-05-10T05:46:45.692Z",
+    "start_time": "2026-05-10T05:46:40.407Z",
+    "title": "JADI-SOUJITH/productivity-backend",
+    "url": "https://github.com/JADI-SOUJITH/productivity-backend"
+  },
+  {
+    "duration_ms": 36652,
+    "end_time": "2026-05-10T05:47:26.916Z",
+    "start_time": "2026-05-10T05:46:50.264Z",
+    "title": "JADI-SOUJITH/productivity-backend",
+    "url": "https://github.com/JADI-SOUJITH/productivity-backend"
+  },
+  {
+    "duration_ms": 41652,
+    "end_time": "2026-05-10T05:47:31.916Z",
+    "start_time": "2026-05-10T05:46:50.264Z",
+    "title": "JADI-SOUJITH/productivity-backend",
+    "url": "https://github.com/JADI-SOUJITH/productivity-backend"
+  },
+  {
+    "duration_ms": 44596,
+    "end_time": "2026-05-10T05:47:34.860Z",
+    "start_time": "2026-05-10T05:46:50.264Z",
+    "title": "JADI-SOUJITH/productivity-backend",
+    "url": "https://github.com/JADI-SOUJITH/productivity-backend"
+  },
+  {
+    "duration_ms": 1054,
+    "end_time": "2026-05-10T05:47:35.914Z",
+    "start_time": "2026-05-10T05:47:34.860Z",
+    "title": "AI Productivity Analyzer \u2014 Dashboard",
+    "url": "http://localhost:8080/"
+  },
+  {
+    "duration_ms": 6002,
+    "end_time": "2026-05-10T05:47:41.916Z",
+    "start_time": "2026-05-10T05:47:35.914Z",
+    "title": "AI Productivity Analyzer \u2014 Dashboard",
+    "url": "http://localhost:8080/"
+  },
+  {
+    "duration_ms": 11001,
+    "end_time": "2026-05-10T05:47:46.915Z",
+    "start_time": "2026-05-10T05:47:35.914Z",
+    "title": "AI Productivity Analyzer \u2014 Dashboard",
+    "url": "http://localhost:8080/"
+  },
+  {
+    "duration_ms": 16001,
+    "end_time": "2026-05-10T05:47:51.915Z",
+    "start_time": "2026-05-10T05:47:35.914Z",
+    "title": "AI Productivity Analyzer \u2014 Dashboard",
+    "url": "http://localhost:8080/"
+  },
+  {
+    "duration_ms": 21001,
+    "end_time": "2026-05-10T05:47:56.915Z",
+    "start_time": "2026-05-10T05:47:35.914Z",
+    "title": "AI Productivity Analyzer \u2014 Dashboard",
+    "url": "http://localhost:8080/"
+  },
+  {
+    "duration_ms": 26000,
+    "end_time": "2026-05-10T05:48:01.914Z",
+    "start_time": "2026-05-10T05:47:35.914Z",
+    "title": "AI Productivity Analyzer \u2014 Dashboard",
+    "url": "http://localhost:8080/"
+  },
+  {
+    "duration_ms": 31001,
+    "end_time": "2026-05-10T05:48:06.915Z",
+    "start_time": "2026-05-10T05:47:35.914Z",
+    "title": "AI Productivity Analyzer \u2014 Dashboard",
+    "url": "http://localhost:8080/"
+  },
+  {
+    "duration_ms": 36001,
+    "end_time": "2026-05-10T05:48:11.915Z",
+    "start_time": "2026-05-10T05:47:35.914Z",
+    "title": "AI Productivity Analyzer \u2014 Dashboard",
+    "url": "http://localhost:8080/"
+  },
+  {
+    "duration_ms": 41001,
+    "end_time": "2026-05-10T05:48:16.915Z",
+    "start_time": "2026-05-10T05:47:35.914Z",
+    "title": "AI Productivity Analyzer \u2014 Dashboard",
+    "url": "http://localhost:8080/"
+  },
+  {
+    "duration_ms": 46001,
+    "end_time": "2026-05-10T05:48:21.915Z",
+    "start_time": "2026-05-10T05:47:35.914Z",
+    "title": "AI Productivity Analyzer \u2014 Dashboard",
+    "url": "http://localhost:8080/"
+  },
+  {
+    "duration_ms": 51001,
+    "end_time": "2026-05-10T05:48:26.915Z",
+    "start_time": "2026-05-10T05:47:35.914Z",
+    "title": "AI Productivity Analyzer \u2014 Dashboard",
+    "url": "http://localhost:8080/"
+  },
+  {
+    "duration_ms": 55016,
+    "end_time": "2026-05-10T05:48:30.930Z",
+    "start_time": "2026-05-10T05:47:35.914Z",
+    "title": "AI Productivity Analyzer \u2014 Dashboard",
+    "url": "http://localhost:8080/"
   }
 ]

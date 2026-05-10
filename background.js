@@ -111,7 +111,7 @@ setInterval(() => {
         const toSend = isLiveEntry ? data.slice(0, -1) : data;
         if (toSend.length === 0) return;
 
-        fetch("https://YOUR_BACKEND_URL/save", {  // <-- swap to your deployed URL
+        fetch("https://productivity-backend-wayz.onrender.com/save", {  // <-- swap to your deployed URL
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(toSend)
