@@ -32,7 +32,7 @@ client = genai.Client(api_key=GEMINI_KEY) if GEMINI_KEY else None
 
 # ── MongoDB ───────────────────────────────────────────────────────────────────
 MONGO_URI = os.getenv("MONGO_URI")
-mongo     = MongoClient(MONGO_URI)
+mongo = MongoClient(MONGO_URI, tlsAllowInvalidCertificates=True)
 db        = mongo["productivity"]
 col_data    = db["tracking_data"]
 col_history = db["history"]
