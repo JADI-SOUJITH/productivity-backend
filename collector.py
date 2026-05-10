@@ -284,7 +284,7 @@ Their stats today (only use if relevant):
 
     try:
         response = client.models.generate_content(
-            model="gemini-1.5-flash-002",
+           model="gemini-2.0-flash",
             contents=prompt,
         )
         return jsonify({"reply": response.text})
