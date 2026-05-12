@@ -443,6 +443,12 @@ def get_data():
 def home():
     return "✅ Productivity Tracker API running"
 
+@app.route("/clear-today", methods=["POST"])
+def clear_today():
+    now_ist = datetime.now(IST)
+    today_start = now_ist.replace(hour=0, minute=0, second=0, microsecond=0)
+    result = col_data.delete_many({"start_time": {"$gte": today_start.isoformat()}})
+    return jsonify({"deleted": result.deleted_count})
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5001))
