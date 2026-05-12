@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from google import genai
 from pymongo import MongoClient
 from pymongo.errors import DuplicateKeyError
 from groq import Groq
