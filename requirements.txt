@@ -1,6 +1,6 @@
 flask
 flask-cors
-google-genai
+groq
 gunicorn
 pymongo[srv]
 dnspython

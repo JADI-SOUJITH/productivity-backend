@@ -3,7 +3,7 @@ from flask_cors import CORS
 from google import genai
 from pymongo import MongoClient
 from pymongo.errors import DuplicateKeyError
-
+from groq import Groq
 import json
 import os
 from datetime import datetime, timezone, timedelta
@@ -27,8 +27,8 @@ CORS(app, origins=ALLOWED_ORIGINS, supports_credentials=False)
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
-GEMINI_KEY = os.getenv("GEMINI_API_KEY")
-client = genai.Client(api_key=GEMINI_KEY) if GEMINI_KEY else None
+GROQ_KEY = os.getenv("GROQ_API_KEY")
+client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 
 # ── MongoDB ───────────────────────────────────────────────────────────────────
 MONGO_URI = os.getenv("MONGO_URI")
@@ -283,11 +283,12 @@ Their stats today (only use if relevant):
 """
 
     try:
-        response = client.models.generate_content(
-           model="gemini-2.5-flash",
-            contents=prompt,
+        response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=300,
         )
-        return jsonify({"reply": response.text})
+        return jsonify({"reply": response.choices[0].message.content})
     except Exception as e:
         return jsonify({"reply": f"AI Error: {str(e)}"}), 500
 
