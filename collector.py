@@ -55,7 +55,7 @@ def load_categories():
             "hackerrank.com", "kaggle.com", "coursera.org", "udemy.com",
             "edx.org", "nptel.ac.in", "w3schools.com", "developer.mozilla.org",
             "docs.python.org", "chatgpt.com", "notion.so",
-            "localhost", "127.0.0.1",
+            "localhost", "127.0.0.1","claude.ai",
         ],
         "distracting": [
             "youtube.com", "instagram.com", "facebook.com", "twitter.com",
